@@ -1,25 +1,38 @@
 {
-    "usuarios": [],
-    "categories": [
-        {
-            "id": 1,
-            "name": "Saúde"
-        },
-        {
-            "id": 2,
-            "name": "Beleza"
-        },
-        {
-            "id": 3,
-            "name": "Bem-Estar"
-        },
-        {
-            "id": 4,
-            "name": "Beleza e Bem-Estar"
-        },
-        {
-            "id":5,
-            "name": "Saúde e Bem-Estar"
-        }
-    ]
+  "usuarios": [
+    {
+      "id": "c6b7",
+      "name": "bia",
+      "email": "bia4sb4@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "846d",
+      "name": "bia",
+      "email": "bia4sb4@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Saúde"
+    },
+    {
+      "id": "2",
+      "name": "Beleza"
+    },
+    {
+      "id": "3",
+      "name": "Bem-Estar"
+    },
+    {
+      "id": "4",
+      "name": "Beleza e Bem-Estar"
+    },
+    {
+      "id": "5",
+      "name": "Saúde e Bem-Estar"
+    }
+  ]
 }

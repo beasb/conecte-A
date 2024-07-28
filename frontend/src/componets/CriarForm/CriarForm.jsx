@@ -24,16 +24,41 @@ function CriarForm() {
     
     }, [])
 
+    const [formCriar, setFormCriar] = useState({
+        name: '',
+        email: '',
+        password: '',
+    })
+
+    const handleFormEdit = (event, name) => {
+     setFormCriar({...formCriar, 
+        [name]: event.target.value })
+    }
+
+    const handleForm = async (event) => {
+        try {
+        event.preventDefault()
+        const response = await fetch(`http://localhost:5000/usuarios`, {
+            method: 'POST',
+            body: JSON.stringify(formCriar)
+        })
+        const json = await response.json()
+        
+        }catch (err) {
+
+        }
+    }
+
     return (
-        <form className={styles.form}>
+        <form onSubmit={handleForm} className={styles.form}>
             <div>
-<Input type="text" text="Seu nome" name="name" placeholder="Insira o seu nome" />
+<Input type="text" text="Seu nome" name="name" placeholder="Insira o seu nome" required value={formCriar.name} onChange={(e) => {handleFormEdit(e, 'name')}} />
             </div>
             <div>
-<Input type="email" text="Seu email" name="email" placeholder="Insira seu email" />
+<Input type="email" text="Seu email" name="email" placeholder="Insira seu email" required value={formCriar.email} onChange={(e) => {handleFormEdit(e, 'email')}} />
             </div>
             <div>
-<Input type="password" text="Crie uma senha" name="password" placeholder="insira sua senha"/>
+<Input type="password" text="Crie uma senha" name="password" placeholder="insira sua senha" required value={formCriar.password} onChange={(e) => {handleFormEdit(e, 'password')}} />
             </div>
             <div>
 <Input type="password" text="Confirme sua senha" name="password" placeholder="confirme sua senha"/>
